@@ -71,9 +71,18 @@ $ git commit -m "Updated Tutorial Repo" -m "I created an index.html file during 
  2 files changed, 5 insertions(+)   
  create mode 100644 index.html  
 
-(NOTE: After any changes to my files I must "git add ." to add changes to be committed and "git commit -m" to commit changes:)
+(NOTE: After any changes to my files that have been saved, I must "git add ." to add changes to be committed and "git commit -m" to commit changes:)
+
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 4 commits.
+  (use "git push" to publish your local commits)   
+
+nothing to commit, working tree clean
 
 ## This saves my commits locally, but their not live on GITHUB yet.
+
+## I need to push them to GITHUB.
 
 
 
