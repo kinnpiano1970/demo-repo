@@ -64,7 +64,7 @@ git commit -m "Updated Tutorial Repo"
 
 git commit -m "Updated Tutorial Repo" -m "I created an index.html file during my GIT tutorial and updated the README.md with what I learned during the lesson"
 
-## <enter>
+## press enter
 
 $ git commit -m "Updated Tutorial Repo" -m "I created an index.html file during my GIT tutorial and updated the README.md with what I learned during the lesson"
 [main cf7795d] Updated Tutorial Repo
@@ -83,6 +83,93 @@ nothing to commit, working tree clean
 ## This saves my commits locally, but their not live on GITHUB yet.
 
 ## I need to push them to GITHUB.
+
+## Before committing to GIT, must generate a SSH KEY so Github will know Im the owner of the account
+
+Use the following command:
+
+ssh-keygen -t rsa -b 4096 -C "kinnpiano1970@gmail.com"
+
+<press enter>
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/kinnp/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /c/Users/kinnp/.ssh/id_rsa
+Your public key has been saved in /c/Users/kinnp/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:I0zMT3tydby5XG61Iv5KKJz1Xd5JOU54wyZHSvJ6ePs kinnpiano1970@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|                 |
+|     o       .   |
+|      + .  ...o. |
+|     o o . .+.=o.|
+|      o S.o  =o%o|
+|      ..o=o +.@+B|
+|       + . * =o=+|
+|        . o + o. |
+|           ooo.E |
++----[SHA256]-----+
+
+
+## The key is saved in this directory:
+
+/c/Users/kinnp/.ssh/id_rsa.pub
+
+## There will be a PUBLIC KEY and a PRIVATE KEY
+
+id_rsa.pub is the PUBLIC KEY
+
+id_rsa is the PRIVATE KEY
+
+## Keep the PRIVATE KEY SECRET ON MY LOCAL MACHINE!!!
+
+## The PUBLIC KEY GOES ON GITHUB and gets compared to my PRIVATE KEY when I need to access GITHUB to prove my identity.
+
+## Print PUBLIC KEY to screen and COPY IT. (switch to directoy with ssh keys)
+
+$ cat id_rsa.pub
+
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDDBPpkQ5hC4ysZcaTiqoLfaykHdVaooNvtO8m9cAfHfImASUBPFPWJLkX6Tn5Qsc8AHS+0IKicFztQYTHEroRt0c4HFJWHLDgXqz8v0IT77O2xeBpNS4nDAP1vDKc0y9tylRbX9MjKJBqDoAtubqWFjeMwdxzKMO17uYkDzIRdz4R8jAEDVEw9bG7EZnifPjKxsmGwYBi/5p1tZCqP4gssDUpypYHt+n6fFk54XjJyBL1D62DrR9fyLZ+Em7X26vbxWcHCsrlgLibuhYuZj0JVvCoWkCJgHkm3udTZ+7kJ3EHTkQxUdCx1Ud6hoqnNDx6mN1ealtKwIgszJyVDa2Xv8eqYLrmXoVsxvHvRLQyjIFclh2OBCUbUbwHn7IoM10XUUI/4hlWmjUPH/KL19QeVRuGQlhfdt5np2jVnzLU2Zk5aDdSlWbd7zN99zIL7vEo19znLxjIvNu0Bt7SksSR47MG2g+Kln8bXLNFvPL4WzNUYgn1FpzS2g0KVDhhaPq+MIE/EolYEUAiIMGiiZEFFNjIXiQYveiiPhpa6ivqr9afoZcfbZLWnarqFMl86wSBd2W8+M0sUvNEPWF3t7Xid94eVHFzThgIglenmtUrec7q/yVb1frYLzkVpfJd5LPRmeU4irSbasGkLAWTSswtIcVaZL+PzOAEFTF6RQj80yQ== kinnpiano1970@gmail.com
+
+## Goto "Settings>SSH and GPG keys>New SSH Key" in Github and give new key a title and paste in the PUBLIC KEY.
+
+## Now I need to let the LOCAL CLI know about the new key I just created:
+## Follow the steps below:
+
+Adding your SSH key to the ssh-agent
+
+Before adding a new SSH key to the ssh-agent to manage your keys, you should have checked for existing SSH keys and generated a new SSH key.
+
+If you have GitHub Desktop installed, you can use it to clone repositories and not deal with SSH keys.
+
+Ensure the ssh-agent is running. You can use the "Auto-launching the ssh-agent" instructions in "Working with SSH key passphrases", or start it manually:
+
+## Start the ssh-agent in the background:
+
+$ eval `ssh-agent -s`
+
+## Gives you this response:
+
+$ eval `ssh-agent -s`
+Agent pid 1404
+
+## Next: Add your SSH private key to the ssh-agent. 
+
+If you created your key with a different name, or if you are adding an existing key that has a different name, replace id_ed25519 in the command with the name of your private key file.
+
+## Use the command below:
+
+$ ssh-add /c/Users/kinnp/.ssh/id_rsa
+
+## Gives you this:
+
+$ ssh-add /c/Users/kinnp/.ssh/id_rsa
+Identity added: /c/Users/kinnp/.ssh/id_rsa (kinnpiano1970@gmail.com)
+
+Add the SSH key to your GitHub account.
+
 
 
 
