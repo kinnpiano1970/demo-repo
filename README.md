@@ -168,7 +168,45 @@ $ ssh-add /c/Users/kinnp/.ssh/id_rsa
 $ ssh-add /c/Users/kinnp/.ssh/id_rsa
 Identity added: /c/Users/kinnp/.ssh/id_rsa (kinnpiano1970@gmail.com)
 
-Add the SSH key to your GitHub account.
+Add the PUBLIC SSH key to your GitHub account.
+
+## Use "git push" to push to GITHUB:
+
+The tutorial said use: "git push orgin master"
+
+I had to use "git push origin main" 
+
+## The result:
+(A popup came up and I had to login to GitHub and then press "authorize this machine" and  then it finally worked)
+
+$ git push origin main
+Logon failed, use ctrl+c to cancel basic credential prompt.
+Enumerating objects: 22, done.
+Counting objects: 100% (22/22), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (20/20), 4.92 KiB | 315.00 KiB/s, done.
+Total 20 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/kinnpiano1970/demo-repo.git
+   2d7da30..732a2db  main -> main
+
+## From the GitHub Page:
+
+Success!
+Authorization was successful. You will be redirected back to Visual Studio Code
+
+Didn't work?
+If you aren't redirected, you can add the token manually.
+
+Your authorization token:
+vscode://vscode.github-authentication/did-authenticate?windowid=1&code=91afb5e2a8b20dd4fd99&state=c6d33cf1-9e5b-45e1-a078-0f0563d4503e
+
+✅ Copied
+Copy the token.
+Switch back to VS code.
+Click Signing in to github.com... in the status bar.
+Paste the token and hit enter.
 
 
 
