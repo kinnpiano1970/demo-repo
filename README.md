@@ -71,7 +71,7 @@ $ git commit -m "Updated Tutorial Repo" -m "I created an index.html file during 
  2 files changed, 5 insertions(+)   
  create mode 100644 index.html  
 
-(NOTE: After any changes to my files I must commit changes:)
+(NOTE: After any changes to my files I must "git add ." to add changes to be committed and "git commit -m" to commit changes:)
 
 ## This saves my commits locally, but their not live on GITHUB yet.
 
