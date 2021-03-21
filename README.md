@@ -208,6 +208,8 @@ Switch back to VS code.
 Click Signing in to github.com... in the status bar.
 Paste the token and hit enter.
 
+#Switch to DEMO REPO 2 NOW TO CONTINUE LESSONS.
+
 
 
 
